@@ -1,5 +1,6 @@
-public class Solution {
-    public int numWays(int n, int k) {
+class Solution {
+public:
+    int numWays(int n, int k) {
         if(n<=0||k<=0)
             return 0;
 

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    public int minMeetingRooms(vector<Interval> &intervals) {
+    int minMeetingRooms(vector<Interval> &intervals) {
         int siz=intervals.size();
         if(siz==0)
             return 0;

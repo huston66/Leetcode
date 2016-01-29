@@ -1,5 +1,6 @@
-public class Solution {
-    public int minCostII(vector<vector<int>>costs) {
+class Solution {
+public:
+    int minCostII(vector<vector<int>>costs) {
         int m=costs.size();
         if(m==0)
             return 0;
