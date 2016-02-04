@@ -4,7 +4,7 @@ public:
     vector<int>h(n+1,0);
     int find(int x){
         if(pa[x]!=x)
-            return pa[x]=find(x);
+            return pa[x]=find(pa[x]);
         return x;
     }
 
