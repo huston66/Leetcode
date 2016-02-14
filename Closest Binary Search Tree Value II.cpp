@@ -8,7 +8,7 @@ public:
             return;
         }
 
-        pq.push_back(make_pair(abs(root->val-target),root->val));
+        pq.push(make_pair(abs(root->val-target),root->val));
         if(pq.size()>k)
             pq.pop();
         dfs(root->left,target,k);
