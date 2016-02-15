@@ -29,5 +29,7 @@ public:
         {
             ret.push_back(iter->second);
         }
+
+        return ret;
     }
 };
