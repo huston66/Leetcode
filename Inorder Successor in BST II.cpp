@@ -10,7 +10,7 @@ public:
                 root=root->right;
             else
             {
-                suc=p;
+                suc=root;
                 root=root->left;
             }
         }
