@@ -1,34 +1,20 @@
-class Solution {
-public:
-    int lengthOfLongestSubstringTwoDistinct(string s) {
-        int len=s.length();
-        int l=0;
-        int r=len-1;
+int lengthOfLongestSubstringTwoDistinct(string s) {
+    if(s.empty()) return 0;
 
-        int mp[256];
-        int count=0;
-        int ma=0;
-        memset(mp,0,sizeof(mp));
-        while(r<len&&l<=r){
-            if(mp[s[r]]>0)
-                mp[s[r]]++;
-            else
-            {
-                mp[s[r]]++;
-                count++;
-                while(count>2){
-                    mp[s[l]]--;
-                    if(mp[s[l]]==0)
-                    {
-                        count--;
-                    }
-                    l++;
-                }
+    int dict[256]; 
+    fill_n(dict,256,0);
+    int start = 0, len = 1, count = 0;
+    for(int i=0; i<s.length(); i++) {
+        dict[s[i]]++;
+        if(dict[s[i]] == 1) { // new char
+            count++;
+            while(count > 2) {
+                dict[s[start]]--;
+                if(dict[s[start]] == 0) count--; 
+                start++;
             }
-
-            ma=max(ma,r-l+1);
         }
-
-        return ma;
+        if(i-start+1 > len) len = i-start+1;
     }
-};
+    return len;
+}
