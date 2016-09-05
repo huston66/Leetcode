@@ -15,25 +15,16 @@ public:
         sort(sta.begin(),sta.end());
         sort(ter.begin(),ter.end());
 
-        int ans=0;
-        int curr=0;
-        int i=0;
-        int j=0;
-        while(i<siz&&j<siz)
-        {
-            if(sta[i]<ter[j])
-            {
-                curr++;
-                ans=max(curr,ans);
-                i++;
-            }
+        int rooms=0;
+        int endItr=0;
+
+        for(int i=0;i<siz;i++){
+            if(sta[i]<ter[endItr])
+                rooms++;
             else
-            {
-                curr--;
-                j++;
-            }
+                endItr++;
         }
 
-        return ans;
+        return rooms;
     }
 };
