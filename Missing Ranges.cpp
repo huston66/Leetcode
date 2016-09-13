@@ -1,7 +1,7 @@
 class Solution {
 public:
     string getrange(int a,int b){
-        if(a==b)
+        if(a!=b)
             return to_string(a)+"->"+to_string(b);
         return to_string(a);
     }
