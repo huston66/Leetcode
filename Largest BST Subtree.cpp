@@ -15,12 +15,12 @@ bool dfs(TreeNode* root,int& mini,int& maxi,int& res){
     if(root==NULL)
         return 1;
 
-    int lmn,lma,rmn,rma,ln,rn;
+    int lmn,lma,rmn,rma,ln=0,rn=0;
     bool left=dfs(root->left,lmn,lma,ln);
     bool right=dfs(root->right,rmn,rma,rn);
 
     if(left&&right){
-        if((!root->left||root-val>=lma)&&(!root->right||root->val<=rmi))
+        if((!root->left||root-val>=lma)&&(!root->right||root->val<=rmn))
         res+=ln+rn+1;
         mini=root->left?lmn:root->val;
         maxi=root->right?rma:root->val;
