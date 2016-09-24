@@ -38,7 +38,6 @@ public:
 		}
 
 		for(int i=0;i<5;i++){
-		    string nxt=s;
 		    if(i==0)
 		    {
 		        if(pos!=0)
@@ -63,7 +62,7 @@ public:
 			ret.push_back('0');
 			ret.push_back('1');
 			ret.push_back('8');
-			retun ret;
+			return ret;
 		}
 		unordered_map<char,char>mp{{'0','0'},{'1','1'},{'6','9'},{'9','6'},{'8','8'}};
 		string s="";

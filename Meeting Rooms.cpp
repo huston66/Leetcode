@@ -1,8 +1,7 @@
 class Solution {
 public:
     bool static cmp(Interval& a,Intervals& b){
-        if(a.start<b.start)
-            return a<b;
+        return a.start<b.start;
     }
 
     bool canAttendMeetings(vector<Interval>& intervals) {

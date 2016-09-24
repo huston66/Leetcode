@@ -2,6 +2,9 @@ class Solution {
 public:
     void wallsAndGates(vector<vector<int>>& rooms) {
         int m=rooms.size();
+        if(m==0)
+            return;
+        
         int n=rooms[0].size();
         int dir[][2]={{1,0},{-1,0},{0,-1},{0,1}};
 
