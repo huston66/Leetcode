@@ -4,12 +4,12 @@ private:
 public:
     bool canWin(string s) {
         int slen=s.length();
-        if(s==""||slen<2)
+        if(slen<2)
             return 0;
 
-        if(mp.count(t))
+        if(mp.count(s))
         {
-            return mp[t];
+            return mp[s];
         }
 
         for(int i=0;i<slen-1;i++)

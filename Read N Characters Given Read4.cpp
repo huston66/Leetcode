@@ -6,7 +6,7 @@ public:
         {
             int curr=read4(buf+res);
             res+=curr;
-            if(curr==0)
+            if(curr<4)
                 break;
         }
 
